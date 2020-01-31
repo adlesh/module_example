@@ -2,12 +2,13 @@ module int_swap // this is the module name
                 // they can be any length, but are recommended to be less than 10 chars
 
 // you can declare anything in the module itself
+import int_stuff.int_add as add
 
-const (
+pub const (
     ModuleName = 'int_swap'
 )
 
-struct Swappable { 
+pub struct Swappable { 
 	pub mut:
 	a int
 	b int
@@ -22,6 +23,7 @@ fn (swapped Swappable) to_string() string {
 
 // these could be considered the public interface of the module
 pub fn (swapped Swappable)str() string {
+	println('const from int_add ${add.constant}')
 	return swapped.to_string()
 }
 

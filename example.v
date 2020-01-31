@@ -1,4 +1,4 @@
-import int_swap // bring in the module for use
+import int_stuff.int_swap as int_swap // bring in the module for use
 
 fn main () {
     // you have to state when something comes from a seperate module
